@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Coverage Math One-Pager — Nurse Shift-Swap Pack</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<article class="sheet">
+<header class="pack-head">
+  <p class="brand">Nurse Shift-Swap Pack &middot; Asdale Dynamics, LLC</p>
+  <h1>Coverage Math One-Pager</h1>
+</header>
+
+<div class="callout"><strong>The whole idea in one sentence:</strong> a swap is safe when it moves hours around without changing the totals &mdash; same team hours, every shift still at minimum staffing, nobody pushed into overtime.</div>
+
+<h2>Check 1 &mdash; Hours balance (zero-sum test)</h2>
+<p>Total hours given by Person A must equal the hours A receives; same for B. The team's total doesn't move &mdash; just the labels change.</p>
+<pre class="script">A gives: Tue 1900-0700  = 12.0 h        A gets:  Fri 1900-0700 = 12.0 h
+B gives: Fri 1900-0700  = 12.0 h        B gets:  Tue 1900-0700 = 12.0 h
+                                              Team total change: 0.0 h  ✓</pre>
+
+<h2>Check 2 &mdash; Every single shift stays staffed</h2>
+<p>Does each individual shift still meet your unit's minimum headcount and skill mix?</p>
+<table>
+  <thead><tr><th>Shift</th><th>Min needed</th><th>Before swap</th><th>After swap</th><th>Okay?</th></tr></thead>
+  <tbody>
+    <tr><td>Tue 1900-0700</td><td>5</td><td>5</td><td>5 (B swapped in for A)</td><td>&#10003;</td></tr>
+    <tr><td>Fri 1900-0700</td><td>5</td><td>5</td><td>5 (A swapped in for B)</td><td>&#10003;</td></tr>
+  </tbody>
+</table>
+
+<h2>Check 3 &mdash; No one tips into overtime</h2>
+<pre class="script">Pay period: [Oct 6 – Oct 19]
+A's hours after swap: [72.0]
+B's hours after swap: [72.0]
+Both under facility overtime threshold for the period:  ✓</pre>
+
+<h2>Quick share of weekly load</h2>
+<p>One 12-hour shift on a standard 3 &times; 12 week is <strong>33.3%</strong> of your weekly hours, so a straight 12-for-12 swap moves exactly one shift's share of workload each way. Balanced swaps never move more.</p>
+
+<h2>Red flags (say &ldquo;no&rdquo; to yourself before asking)</h2>
+<ul class="check">
+  <li>The swap gives one person an <strong>overloaded</strong> two-week stretch.</li>
+  <li>One of the two shifts drops below minimum or the right skill mix.</li>
+  <li>&ldquo;We'll figure out the return shift later&rdquo; &mdash; that's a debt, not a swap.</li>
+  <li>A weekends/rotation promise with no date attached.</li>
+  <li>Anyone says &ldquo;it's fine, nobody checks&rdquo; &mdash; someone always checks.</li>
+</ul>
+
+<h2>What break-even is NOT</h2>
+<ul>
+  <li>Trading hours unevenly &ldquo;plus a favor.&rdquo; The math <em>is</em> the contract.</li>
+  <li>Swapping a <em>holiday</em> for a <em>regular day</em> without extra agreement &mdash; holidays have their own fairness rules; treat them as separate negotiations.</li>
+  <li>Quietly changing differentials (night &harr; day) without both people acknowledging the pay shift.</li>
+</ul>
+
+<div class="callout"><strong>Pocket summary:</strong> zero-sum for people. Non-negative for staffing. Nobody into overtime. If all three hold, ask with confidence. If one doesn't, rework it before asking.</div>
+
+<div class="disclaimer">Education and organization only &mdash; not medical advice. Your facility's own staffing and float rules always override anything on this page.</div>
+<footer class="pack-foot">Nurse Shift-Swap Pack &middot; &copy; 2026 Asdale Dynamics, LLC &middot; MIT License</footer>
+</article>
+</body>
+</html>

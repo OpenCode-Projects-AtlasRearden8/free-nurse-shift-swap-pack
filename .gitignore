@@ -1,0 +1,12 @@
+# Build artifacts
+_build/
+__pycache__/
+*.pyc
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Never commit env files or secrets
+.env
+.env.*

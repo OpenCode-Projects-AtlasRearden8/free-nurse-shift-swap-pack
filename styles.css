@@ -1,0 +1,113 @@
+/* Shift-Swap Pack print styles — Asdale Dynamics, LLC
+   Letter/A4 friendly: @page margins, no reliance on screen layout. */
+
+:root {
+  --ink: #2b2b2b;
+  --rose: #a4546d;
+  --teal: #2d6a6f;
+  --pale: #fdf3f5;
+  --line: #d8c7cd;
+}
+
+@page {
+  size: letter;
+  margin: 0.75in;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 8.5in;
+  padding: 0.5in;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11.5pt;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #fff;
+}
+
+header.pack-head {
+  border-bottom: 3px solid var(--rose);
+  padding-bottom: 0.35em;
+  margin-bottom: 1em;
+}
+
+header.pack-head .brand {
+  font-size: 9.5pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 0 0 0.15em;
+}
+
+h1 { font-size: 21pt; margin: 0 0 0.35em; color: var(--rose); }
+h2 { font-size: 14pt; color: var(--teal); margin: 1.1em 0 0.35em; border-bottom: 1px solid var(--line); padding-bottom: 0.15em; }
+h3 { font-size: 12pt; color: var(--rose); margin: 0.9em 0 0.25em; }
+
+p  { margin: 0.45em 0; }
+ul, ol { margin: 0.45em 0; padding-left: 1.4em; }
+li { margin: 0.2em 0; }
+
+/* Checkbox lists */
+ul.check { list-style: none; padding-left: 0; }
+ul.check li::before { content: "\2610  "; color: var(--teal); font-weight: bold; }
+
+/* Script blocks (texts/emails/coupons) */
+pre.script {
+  white-space: pre-wrap;
+  font-family: "Consolas", "Menlo", monospace;
+  font-size: 9.8pt;
+  background: var(--pale);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--rose);
+  border-radius: 4px;
+  padding: 0.7em 0.9em;
+  page-break-inside: avoid;
+}
+
+code { font-family: "Consolas", "Menlo", monospace; font-size: 0.9em; background: var(--pale); padding: 0 0.2em; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.6em 0;
+  font-size: 10.5pt;
+  page-break-inside: avoid;
+}
+th, td { border: 1px solid var(--line); padding: 0.35em 0.5em; text-align: left; vertical-align: top; }
+th { background: var(--pale); color: var(--teal); }
+
+.callout {
+  background: var(--pale);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.6em 0.9em;
+  margin: 0.8em 0;
+  page-break-inside: avoid;
+}
+
+.disclaimer {
+  margin-top: 1.4em;
+  border-top: 2px solid var(--line);
+  padding-top: 0.5em;
+  font-size: 9pt;
+  color: #666;
+  page-break-inside: avoid;
+}
+
+footer.pack-foot {
+  margin-top: 1.2em;
+  font-size: 9pt;
+  color: #777;
+  text-align: center;
+}
+
+article.sheet { page-break-after: always; }
+article.sheet:last-of-type { page-break-after: auto; }
+
+/* Screen niceties — harmless when printing */
+@media screen {
+  body { background: #f7f4f5; padding: 1.2in 0.75in; background-clip: content-box; }
+  article.sheet { background: #fff; padding: 0.5in; margin-bottom: 1.5em; border: 1px solid var(--line); box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+}
